@@ -1,0 +1,57 @@
+name: Submit an Event
+description: event suggestion template
+labels:
+  - event
+  - pending
+body:
+  - type: input
+    attributes:
+      label: Name of the event
+      description: Please use the name indicated on the conference or event website.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: website
+      description: a link to the event website
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: CFP Closes
+      placeholder: '2123-01-31'
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Submission Types
+      description: Select the types of submissions this conference accepts
+      options:
+        - label: lightning talks (5-10 mins)
+          required: false
+        - label: talks (30-40 mins)
+          required: false
+        - label: workshop
+          required: false
+        - label: panel
+          required: false
+        - label: poster
+          required: false
+        - label: stand
+          required: false
+        - label: other, please specify
+          required: false
+  - type: checkboxes
+    attributes:
+      label: Code of conduct
+      description: >-
+        I've confirmed that the event has a code of conduct posted to their
+        website
+      options:
+        - label: 'Yes'
+          required: true
+  - type: markdown
+    attributes:
+      value: >-
+        This template was generated with [Issue Forms
+        Creator](https://issue-forms-creator.netlify.app)
